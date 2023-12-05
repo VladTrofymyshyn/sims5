@@ -65,3 +65,12 @@ class Human:
                 "McLaren": {"fuel": 80, "strength": 800, "consumption": 4},
                 "Lamborghini": {"fuel": 90, "strength": 780, "consumption": 17},
                 "Porsche": {"fuel": 110, "strenght": 330, "consumption": 11}
+
+            def drive(self):
+                if self.strength > 0 and self.fuel >= self.consumption:
+                    self.fuel -= self.consumption
+                    self.strength -= 0.5
+                    return True
+                else:
+                    print("Машина не можуе рухатися")
+                    return False
